@@ -27,7 +27,7 @@ jobs:
       - name: Prepara la cartella da pubblicare
         run: |
           mkdir _site
-          cp index.html _site/
+          cp index.html favicon.svg og-image.png foto.webp _site/
 
       - uses: actions/configure-pages@v5
 

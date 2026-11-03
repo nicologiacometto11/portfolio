@@ -18,7 +18,7 @@ e vai su http://localhost:8000.
 
 Il sito è su GitHub Pages: https://nicologiacometto11.github.io/portfolio/
 
-Il workflow `.github/workflows/deploy.yml` lo pubblica a ogni push su `main`, oppure a mano da Actions → "Run workflow". Non c'è build: viene pubblicato solo `index.html`.
+Il workflow `.github/workflows/deploy.yml` lo pubblica a ogni push su `main`, oppure a mano da Actions → "Run workflow". Non c'è build: vengono pubblicati solo `index.html`, `favicon.svg`, `og-image.png` e `foto.webp`. Un file nuovo va aggiunto anche allo step "Prepara la cartella da pubblicare" del workflow.
 
 Impostazione da fare una volta sola: Settings → Pages → Source = GitHub Actions.
 
@@ -34,4 +34,3 @@ Nel sito non ci sono data di nascita, indirizzo di casa e foto del CV.
 - Controllare le descrizioni dei progetti.
 - Valutare la partita IVA e rivedere di conseguenza i testi ("freelance", "nuovi progetti").
 - Eventuale LinkedIn nei Contatti.
-- Meta tag per l'anteprima dei link e favicon.

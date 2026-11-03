@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nicolò Silvio Giacometto · Sviluppatore freelance a Torino</title>
 <meta name="description" content="Portfolio di Nicolò Silvio Giacometto, sviluppatore freelance a Torino: siti vetrina, e-commerce Shopify, web app e app per iOS e Android su misura.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#7B1E2E">
+<link rel="canonical" href="https://nicologiacometto11.github.io/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Nicolò Silvio Giacometto">
+<meta property="og:title" content="Nicolò Silvio Giacometto · Sviluppatore freelance a Torino">
+<meta property="og:description" content="Siti vetrina, e-commerce, web app e app per iOS e Android su misura.">
+<meta property="og:url" content="https://nicologiacometto11.github.io/portfolio/">
+<meta property="og:image" content="https://nicologiacometto11.github.io/portfolio/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
   /* Layout: pagina singola a sinistra, scheda dei dati a destra in alto, poi un registro dei lavori a righe. */
@@ -68,7 +81,9 @@
   .actions { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; }
   .btn { display: inline-block; background: var(--accent); color: var(--bg); text-decoration: none; padding: 11px 20px; border-radius: 4px; font-weight: 600; }
   .btn:hover { color: var(--bg); filter: brightness(1.12); }
-  .scheda { margin: 0; align-self: end; display: grid; gap: 0; border-top: 2px solid var(--accent); }
+  .lato { align-self: end; display: grid; gap: 20px; }
+  .foto { width: 132px; height: 132px; object-fit: cover; border-radius: 50%; border: 2px solid var(--accent); display: block; }
+  .scheda { margin: 0; display: grid; gap: 0; border-top: 2px solid var(--accent); }
   .scheda div { display: grid; gap: 2px; padding: 12px 0; border-bottom: 1px solid var(--line); }
   .scheda dt { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
   .scheda dd { margin: 0; font-weight: 600; }
@@ -136,12 +151,15 @@
         <a href="https://github.com/nicologiacometto11" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
+    <div class="lato">
+    <img class="foto" src="foto.webp" width="250" height="250" alt="Nicolò Silvio Giacometto">
     <dl class="scheda">
       <div><dt>Base</dt><dd>Collegno (TO)</dd></div>
       <div><dt>Clienti in zona</dt><dd>Collegno, Grugliasco, Val della Torre</dd></div>
       <div><dt>Formazione</dt><dd>Informatica, Università di Torino</dd></div>
       <div><dt>Disponibilità</dt><dd>Nuovi progetti, anche da remoto</dd></div>
     </dl>
+    </div>
   </header>
 
   <section id="servizi">

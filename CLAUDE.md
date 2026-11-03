@@ -16,7 +16,7 @@ Sito statico: un solo file `index.html` con HTML e CSS dentro, nessun JavaScript
 python3 -m http.server 8000   # poi http://localhost:8000
 ```
 
-Hosting: GitHub Pages (repo pubblico), pubblicato dal workflow `.github/workflows/deploy.yml` a ogni push su `main`. URL: `https://nicologiacometto11.github.io/portfolio/`. Il workflow pubblica solo `index.html`: se si aggiungono file (immagini, CSS), vanno copiati anche nello step "Prepara la cartella da pubblicare".
+Hosting: GitHub Pages (repo pubblico), pubblicato dal workflow `.github/workflows/deploy.yml` a ogni push su `main`. URL: `https://nicologiacometto11.github.io/portfolio/`. Il workflow pubblica solo `index.html`, `favicon.svg`, `og-image.png`, `foto.webp`: ogni file nuovo (immagini, CSS) va copiato anche nello step "Prepara la cartella da pubblicare".
 
 ## Struttura della pagina
 
@@ -60,7 +60,7 @@ Tennis Manager e Stream Utility sono stati tolti dal sito.
 - Aggiungere screenshot dei progetti.
 - Verificare che `psychart.it` sia il link giusto da mostrare.
 - Eventuale dominio personale.
-- Meta tag per la condivisione dei link (anteprima) e favicon.
+- Con un dominio personale aggiornare gli URL assoluti nei meta tag (`og:url`, `og:image`, `canonical`).
 
 ## Convenzioni
 
