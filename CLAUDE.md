@@ -34,24 +34,29 @@ I lavori sono un registro a righe (tipo e stato a sinistra, titolo, descrizione 
 ## Contenuti: regole
 
 - Usare solo fatti veri su Nicolò e sui progetti. Niente prezzi, anni di esperienza, testimonianze o tecnologie inventate.
-- Le tecnologie si indicano solo dove sono note (oggi: Shopify per Equipe Sport, React e Vite per Tennis Manager).
+- Le tecnologie si indicano solo dove sono note (oggi: quelle trovate nelle cartelle dei progetti, vedi sotto).
 - Testi semplici e diretti, senza trattini lunghi a metà frase e senza giri di parole.
 
 ## Progetti mostrati
 
-- Equipe Sport: redesign e-commerce Shopify, negozio di Grugliasco (in corso)
-- La Dea Ranch: sito vetrina, centro ippico di Val della Torre (in corso)
-- Psychart: SaaS per cartelle cliniche di psicologi italiani, `psychart.it`
-- Tennis Manager: web app React/Vite su Netlify
-- Stream Utility: app Windows per dirette Twitch/Kick/YouTube, incarico di refactoring (in corso)
+Descritti guardando le cartelle in `~/Sviluppo` (3 novembre 2026):
+
+- Psychart: app Flutter + FastAPI + PostgreSQL per psicologi e medici, cifratura E2EE, `psychart.it`
+- Equipe Sport: redesign Shopify di Grugliasco (tema con sezioni Liquid su misura, app con Shopify Function di sconto) (in corso)
+- La Dea Ranch: sito vetrina React/Vite su GitHub Pages, centro ippico di Val della Torre (in corso)
+- itstracker: tracker serie TV e film, PWA con Firebase e TMDB (repo sotto l'org `itsurri`)
+- Stars & Dungeons: companion web per un GDR, React/Vite/Supabase
+
+Tennis Manager e Stream Utility sono stati tolti dal sito.
 
 ## Da fare
 
 - Aggiungere i contatti (email, telefono o LinkedIn) in `#contatti`. Per ora c'è solo GitHub.
-- Far controllare a Nicolò le descrizioni dei progetti, in particolare Psychart e Tennis Manager.
+- Far controllare a Nicolò le descrizioni dei progetti, in particolare Psychart.
 - Aggiungere screenshot dei progetti.
 - Verificare che `psychart.it` sia il link giusto da mostrare.
-- Pubblicare su Netlify o GitHub Pages ed eventuale dominio personale.
+- Eventuale dominio personale.
+- Aggiungere link dove ci sono siti pubblici (La Dea Ranch, itstracker, Stars & Dungeons).
 - Meta tag per la condivisione dei link (anteprima) e favicon.
 
 ## Convenzioni
