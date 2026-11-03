@@ -16,7 +16,7 @@ Sito statico: un solo file `index.html` con HTML e CSS dentro, nessun JavaScript
 python3 -m http.server 8000   # poi http://localhost:8000
 ```
 
-Hosting previsto: Netlify o GitHub Pages, puntando alla cartella senza build.
+Hosting: GitHub Pages (repo pubblico), pubblicato dal workflow `.github/workflows/deploy.yml` a ogni push su `main`. URL: `https://nicologiacometto11.github.io/portfolio/`. Il workflow pubblica solo `index.html`: se si aggiungono file (immagini, CSS), vanno copiati anche nello step "Prepara la cartella da pubblicare".
 
 ## Struttura della pagina
 

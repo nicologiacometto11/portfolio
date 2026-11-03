@@ -16,7 +16,11 @@ e vai su http://localhost:8000.
 
 ## Pubblicarlo
 
-Va bene qualsiasi hosting statico (Netlify, GitHub Pages): basta puntare alla cartella, senza build.
+Il sito è su GitHub Pages: https://nicologiacometto11.github.io/portfolio/
+
+Il workflow `.github/workflows/deploy.yml` lo pubblica a ogni push su `main`, oppure a mano da Actions → "Run workflow". Non c'è build: viene pubblicato solo `index.html`.
+
+Impostazione da fare una volta sola: Settings → Pages → Source = GitHub Actions.
 
 ## Da fare
 
