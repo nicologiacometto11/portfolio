@@ -45,8 +45,8 @@ La sezione `#percorso` viene dal CV (`~/Desktop/CV_Nicolo_Silvio_Giacometto.pdf`
 
 Descritti guardando le cartelle in `~/Sviluppo` (3 novembre 2026):
 
-- Psychart: app Flutter + FastAPI + PostgreSQL per psicologi e medici, cifratura E2EE, `psychart.it`, gratis su App Store e Google Play, fatta da solo
 - Equipe Sport: redesign Shopify di Grugliasco (tema con sezioni Liquid su misura, app con Shopify Function di sconto) (in corso)
+- Psychart: app Flutter + FastAPI + PostgreSQL per psicologi e medici, cifratura E2EE, `psychart.it`, gratis su App Store e Google Play, fatta da solo
 - La Dea Ranch: sito vetrina React/Vite su GitHub Pages, centro ippico di Val della Torre (in corso)
 - itstracker: tracker serie TV e film, PWA con Firebase e TMDB (fatto con un socio, repo sotto l'org `itsurri`), `itsurri.github.io/itstracker`
 - Stars & Dungeons: companion web per un GDR, React/Vite/Supabase
