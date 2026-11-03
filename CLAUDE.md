@@ -1,4 +1,4 @@
-# Portfolio di Nicolò Giacometto: contesto del progetto
+# Portfolio di Nicolò Silvio Giacometto: contesto del progetto
 
 Sito portfolio personale di Nicolò per proporsi come sviluppatore freelance. Lingua del sito e dei commenti: italiano. Nicolò scrive in italiano, tono informale, preferisce risposte brevi e dirette.
 

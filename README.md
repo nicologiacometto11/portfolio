@@ -1,6 +1,6 @@
 # Portfolio
 
-Sito portfolio personale di Nicolò Giacometto, sviluppatore freelance a Torino.
+Sito portfolio personale di Nicolò Silvio Giacometto, sviluppatore freelance a Torino.
 
 Pagina statica, un solo file: `index.html` con HTML e CSS dentro, nessuna dipendenza da installare. Gli unici file esterni sono i font di Google Fonts.
 
