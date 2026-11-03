@@ -2,7 +2,7 @@
 
 Sito portfolio personale di Nicolò Silvio Giacometto, sviluppatore freelance a Torino.
 
-Pagina statica, un solo file: `index.html` con HTML e CSS dentro, nessuna dipendenza da installare. Gli unici file esterni sono i font di Google Fonts.
+Pagina statica, un solo file: `index.html` con HTML e CSS dentro, nessuna dipendenza da installare. I font sono in locale nella cartella `fonts/`, nessuna richiesta a servizi esterni.
 
 ## Provarlo in locale
 
@@ -18,7 +18,7 @@ e vai su http://localhost:8000.
 
 Il sito è su GitHub Pages: https://nicologiacometto11.github.io/portfolio/
 
-Il workflow `.github/workflows/deploy.yml` lo pubblica a ogni push su `main`, oppure a mano da Actions → "Run workflow". Non c'è build: vengono pubblicati solo `index.html`, `en/index.html`, `favicon.svg`, `og-image.png` e `foto.webp`. Un file nuovo va aggiunto anche allo step "Prepara la cartella da pubblicare" del workflow.
+Il workflow `.github/workflows/deploy.yml` lo pubblica a ogni push su `main`, oppure a mano da Actions → "Run workflow". Non c'è build: vengono pubblicati solo `index.html`, `en/`, `fonts/`, `favicon.svg`, `og-image.png` e `foto.webp`. Un file nuovo va aggiunto anche allo step "Prepara la cartella da pubblicare" del workflow.
 
 Impostazione da fare una volta sola: Settings → Pages → Source = GitHub Actions.
 

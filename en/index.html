@@ -20,8 +20,48 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="preload" href="../fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 500 800;
+  font-display: swap;
+  src: url(../fonts/bricolage-grotesque.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/jetbrains-mono.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/jetbrains-mono.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/source-sans-3.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/source-sans-3.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
   /* Layout: pagina singola a sinistra, scheda dei dati a destra in alto, poi un registro dei lavori a righe. */
   :root {
     color-scheme: light;
@@ -113,6 +153,11 @@
   .lavoro h3 { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.01em; color: var(--accent); }
   .lavoro h3 a:hover { filter: brightness(1.25); }
   .lavoro p { margin-top: 6px; color: var(--muted); max-width: 40em; }
+  .lavoro .desc { margin-top: 6px; max-width: 40em; color: var(--muted); }
+  .lavoro .desc p { margin: 0; }
+  .lavoro .desc details p { margin-top: 6px; }
+  .lavoro .desc summary { margin-top: 6px; cursor: pointer; width: fit-content; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+  .lavoro .desc summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   .tags { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
   .tags li { font-family: var(--font-mono); font-size: 0.75rem; background: var(--chip); padding: 3px 9px; border-radius: 3px; }
 
@@ -144,7 +189,7 @@
     .lavoro > div:last-child { display: contents; }
     .lavoro h3 { order: 1; }
     .lavoro .meta { order: 2; margin-top: 2px; }
-    .lavoro p { order: 3; margin-top: 4px; }
+    .lavoro .desc { order: 3; margin-top: 4px; }
     .lavoro .tags { order: 4; }
     .lavoro .meta { flex-direction: row; align-items: center; gap: 14px; }
     .stack div { grid-template-columns: minmax(0, 1fr); }
@@ -212,7 +257,10 @@
         </div>
         <div>
           <h3><a href="https://equipesport.it" target="_blank" rel="noopener">Equipe Sport</a></h3>
-          <p>Redesign of the Shopify store of a sporting goods shop in Grugliasco. Custom theme with bespoke sections (hero, categories, personalisation banner, product page with DTF print ordering) and a Shopify app with a discount function for pricing. Shipping with MBE alongside BRT, stock and catalogue kept up to date. I also manage the online inventory.</p>
+          <div class="desc">
+            <p>Redesign of the Shopify store of a sporting goods shop in Grugliasco. I also manage the online inventory.</p>
+            <details><summary>Read more</summary><p>Custom theme with bespoke sections (hero, categories, personalisation banner, product page with DTF print ordering) and a Shopify app with a discount function for pricing. Shipping with MBE alongside BRT, stock and catalogue kept up to date.</p></details>
+          </div>
           <ul class="tags"><li>Shopify</li><li>Liquid</li><li>Shopify Functions</li></ul>
         </div>
       </article>
@@ -223,7 +271,10 @@
         </div>
         <div>
           <h3><a href="https://psychart.it" target="_blank" rel="noopener">Psychart</a></h3>
-          <p>Free app for psychologists and doctors, built on my own. It handles patients, calendar, payments, PDF reports and a section for student patients. Doctors also get medical reports, prescriptions and certificates. Clinical data is encrypted on the device before it reaches the server, and the app also works offline. I built the product website too, with privacy policy and DPIA.</p>
+          <div class="desc">
+            <p>Free app for psychologists and doctors, built on my own. It handles patients, calendar, payments, PDF reports and a section for student patients.</p>
+            <details><summary>Read more</summary><p>Doctors also get medical reports, prescriptions and certificates. Clinical data is encrypted on the device before it reaches the server, and the app also works offline. I built the product website too, with privacy policy and DPIA.</p></details>
+          </div>
           <ul class="tags"><li>Flutter</li><li>FastAPI</li><li>PostgreSQL</li></ul>
         </div>
       </article>
@@ -234,7 +285,10 @@
         </div>
         <div>
           <h3><a href="https://nicologiacometto11.github.io/la-dea-ranch/" target="_blank" rel="noopener">La Dea Ranch</a></h3>
-          <p>Website for a horse riding centre and farm in Val della Torre: activities, Winter Camp, contacts, social links and real photos of the ranch. Designed for visitors coming from Instagram on their phone. Published with GitHub Pages. A later phase will handle contact requests and bookings.</p>
+          <div class="desc">
+            <p>Website for a horse riding centre and farm in Val della Torre: activities, Winter Camp, contacts, social links and real photos of the ranch. Designed for visitors coming from Instagram on their phone.</p>
+            <details><summary>Read more</summary><p>Published with GitHub Pages. A later phase will handle contact requests and bookings.</p></details>
+          </div>
           <ul class="tags"><li>React</li><li>Vite</li><li>GitHub Pages</li></ul>
         </div>
       </article>
@@ -245,7 +299,10 @@
         </div>
         <div>
           <h3><a href="https://itsurri.github.io/itstracker/" target="_blank" rel="noopener">itstracker</a></h3>
-          <p>TV series and film tracker that installs as an app: library with per-episode progress, upcoming episodes, stats and a yearly recap. With Google sign-in you get sync across devices, comments, public profiles, friends, chat and notifications. Data from TMDB. Built together with a partner.</p>
+          <div class="desc">
+            <p>TV series and film tracker that installs as an app: library with per-episode progress, upcoming episodes, stats and a yearly recap. Built together with a partner.</p>
+            <details><summary>Read more</summary><p>With Google sign-in you get sync across devices, comments, public profiles, friends, chat and notifications. Data from TMDB.</p></details>
+          </div>
           <ul class="tags"><li>JavaScript</li><li>Firebase</li><li>Firestore</li><li>TMDB</li></ul>
         </div>
       </article>
@@ -256,7 +313,10 @@
         </div>
         <div>
           <h3><a href="https://nicologiacometto11.github.io/stars-and-dungeons/" target="_blank" rel="noopener">Stars &amp; Dungeons</a></h3>
-          <p>Companion app for a tabletop role-playing game. Each player has an account and a character sheet that lasts over time: stats calculated from the rules, shop, inventory, bestiary and crafting. The Game Master has a dedicated view with a shared game table in real time.</p>
+          <div class="desc">
+            <p>Companion app for a tabletop role-playing game.</p>
+            <details><summary>Read more</summary><p>Each player has an account and a character sheet that lasts over time: stats calculated from the rules, shop, inventory, bestiary and crafting. The Game Master has a dedicated view with a shared game table in real time.</p></details>
+          </div>
           <ul class="tags"><li>React</li><li>Vite</li><li>Supabase</li></ul>
         </div>
       </article>

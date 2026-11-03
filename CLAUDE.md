@@ -10,13 +10,13 @@ Prima versione completa, pagina singola. Repo: `github.com/nicologiacometto11/po
 
 ## Stack e comandi
 
-Sito statico: un solo file `index.html` con HTML e CSS dentro, nessun JavaScript, nessuna build, nessuna dipendenza. Unico file esterno: i font di Google Fonts (Bricolage Grotesque, Source Sans 3, JetBrains Mono).
+Sito statico: un solo file `index.html` con HTML e CSS dentro, nessun JavaScript, nessuna build, nessuna dipendenza. Font in locale nella cartella `fonts/` (Bricolage Grotesque, Source Sans 3, JetBrains Mono, solo subset latin, woff2), niente richieste a Google.
 
 ```
 python3 -m http.server 8000   # poi http://localhost:8000
 ```
 
-Hosting: GitHub Pages (repo pubblico), pubblicato dal workflow `.github/workflows/deploy.yml` a ogni push su `main`. URL: `https://nicologiacometto11.github.io/portfolio/`. Il workflow pubblica solo `index.html`, la cartella `en/`, `favicon.svg`, `og-image.png`, `foto.webp`: ogni file nuovo (immagini, CSS) va copiato anche nello step "Prepara la cartella da pubblicare".
+Hosting: GitHub Pages (repo pubblico), pubblicato dal workflow `.github/workflows/deploy.yml` a ogni push su `main`. URL: `https://nicologiacometto11.github.io/portfolio/`. Il workflow pubblica solo `index.html`, le cartelle `en/` e `fonts/`, `favicon.svg`, `og-image.png`, `foto.webp`: ogni file nuovo (immagini, CSS) va copiato anche nello step "Prepara la cartella da pubblicare".
 
 ## Lingue
 
@@ -59,12 +59,23 @@ Tennis Manager e Stream Utility sono stati tolti dal sito.
 
 ## Da fare
 
-- Eventuale LinkedIn in `#contatti` (ora ci sono email, telefono e GitHub).
-- Far controllare a Nicolò le descrizioni dei progetti, in particolare Psychart.
-- Aggiungere screenshot dei progetti.
-- Verificare che `psychart.it` sia il link giusto da mostrare.
-- Eventuale dominio personale.
-- Con un dominio personale aggiornare gli URL assoluti nei meta tag (`og:url`, `og:image`, `canonical`).
+- Valutare la partita IVA e rivedere di conseguenza i testi ("freelance", "nuovi progetti"). Quando c'è, metterla nel footer.
+- Aggiungere screenshot dei progetti (quelli dei siti online si possono fare da browser; per le app mobile servono quelli di Nicolò).
+- Controllare le descrizioni dei progetti (scritte guardando le cartelle) e la frase in "Chi sono" ("ultimo anno", "part-time").
+- Eventuale LinkedIn in `#contatti`.
+- Con un dominio personale aggiornare gli URL assoluti nei meta tag (`og:url`, `og:image`, `canonical`, `hreflang`).
+
+## Proposte non ancora fatte
+
+- Recensioni vere dei clienti (Dea Ranch, Equipe Sport), con permesso a pubblicarle.
+- Mini casi di studio per i lavori per clienti: com'era prima, cosa ho fatto, com'è adesso (solo fatti veri).
+- Google Search Console, per far indicizzare il sito (non tocca il codice).
+- Controllo con Lighthouse (velocità, accessibilità, SEO) e correzioni.
+- Link al sito nel CV e nel campo "Website" del profilo GitHub (lo fa Nicolò).
+- Dominio personale (es. `nicologiacometto.it`): record A e CNAME verso GitHub Pages, Settings → Pages → Custom domain.
+- Bottone WhatsApp piccolo e fisso in basso da telefono.
+- Contatore di visite senza cookie (GoatCounter o Plausible), facoltativo.
+- CV scaricabile in PDF senza dati personali (niente indirizzo né data di nascita), con bottone "Scarica il CV".
 
 ## Convenzioni
 
