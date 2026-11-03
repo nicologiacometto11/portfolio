@@ -24,9 +24,9 @@ Versione inglese in `en/index.html`, stessa struttura e stesso CSS (copiato). Og
 
 ## Struttura della pagina
 
-Header con nome e scheda dati (base, clienti in zona, formazione, disponibilità), poi le sezioni `#servizi`, `#lavori`, `#stack`, `#chi-sono`, `#contatti` e il footer.
+Selettore lingua IT/EN, header con nome, foto e scheda dati (sede, clienti in zona, formazione, disponibilità), poi le sezioni `#servizi`, `#lavori`, `#stack`, `#percorso`, `#chi-sono`, `#contatti` (WhatsApp, email, telefono, GitHub, LinkedIn) e il footer.
 
-I lavori sono un registro a righe (tipo e stato a sinistra, titolo, descrizione e tag a destra), non card.
+I lavori sono un registro a righe (tipo a sinistra, titolo, descrizione con "Leggi tutto" e tag a destra; da telefono prima il titolo), non card.
 
 ## Design
 
@@ -62,7 +62,6 @@ Tennis Manager e Stream Utility sono stati tolti dal sito.
 - Valutare la partita IVA e rivedere di conseguenza i testi ("freelance", "nuovi progetti"). Quando c'è, metterla nel footer.
 - Aggiungere screenshot dei progetti (quelli dei siti online si possono fare da browser; per le app mobile servono quelli di Nicolò).
 - Controllare le descrizioni dei progetti (scritte guardando le cartelle) e la frase in "Chi sono" ("ultimo anno", "part-time").
-- Eventuale LinkedIn in `#contatti`.
 - Con un dominio personale aggiornare gli URL assoluti nei meta tag (`og:url`, `og:image`, `canonical`, `hreflang`).
 
 ## Proposte non ancora fatte
