@@ -37,6 +37,10 @@ I lavori sono un registro a righe (tipo e stato a sinistra, titolo, descrizione 
 - Le tecnologie si indicano solo dove sono note (oggi: quelle trovate nelle cartelle dei progetti, vedi sotto).
 - Testi semplici e diretti, senza trattini lunghi a metà frase e senza giri di parole.
 
+## CV
+
+La sezione `#percorso` viene dal CV (`~/Desktop/CV_Nicolo_Silvio_Giacometto.pdf`). Nel sito NON vanno data di nascita, indirizzo di casa, patente e foto. Il PDF non è pubblicato.
+
 ## Progetti mostrati
 
 Descritti guardando le cartelle in `~/Sviluppo` (3 novembre 2026):
@@ -51,7 +55,7 @@ Tennis Manager e Stream Utility sono stati tolti dal sito.
 
 ## Da fare
 
-- Aggiungere i contatti (email, telefono o LinkedIn) in `#contatti`. Per ora c'è solo GitHub.
+- Eventuale LinkedIn in `#contatti` (ora ci sono email, telefono e GitHub).
 - Far controllare a Nicolò le descrizioni dei progetti, in particolare Psychart.
 - Aggiungere screenshot dei progetti.
 - Verificare che `psychart.it` sia il link giusto da mostrare.
