@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nicolò Giacometto · Sviluppatore freelance a Torino</title>
+<meta name="description" content="Portfolio di Nicolò Giacometto, sviluppatore freelance a Torino: siti vetrina, e-commerce Shopify e web app su misura.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: pagina singola a sinistra, scheda dei dati a destra in alto, poi un registro dei lavori a righe. */
+  :root {
+    color-scheme: light;
+    --bg: #F2F3F6;
+    --fg: #161922;
+    --muted: #565C6C;
+    --line: #D3D7E0;
+    --accent: #7B1E2E;
+    --chip: #E4E7EE;
+    --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #13151B;
+      --fg: #ECEDF0;
+      --muted: #A0A6B4;
+      --line: #2A2E39;
+      --accent: #E57F8D;
+      --chip: #1F232C;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #13151B;
+    --fg: #ECEDF0;
+    --muted: #A0A6B4;
+    --line: #2A2E39;
+    --accent: #E57F8D;
+    --chip: #1F232C;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    padding-block: 40px 56px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; }
+  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+  a:hover { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; }
+  p { margin: 0; }
+  .mono { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 290px); gap: 40px 64px; padding-bottom: 56px; }
+  .hero h1 { font-size: clamp(2.6rem, 7.2vw, 4.7rem); line-height: 1; font-weight: 700; letter-spacing: -0.03em; margin-top: 14px; }
+  .lead { margin-top: 24px; max-width: 34em; font-size: 1.25rem; line-height: 1.5; }
+  .actions { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; }
+  .btn { display: inline-block; background: var(--accent); color: var(--bg); text-decoration: none; padding: 11px 20px; border-radius: 4px; font-weight: 600; }
+  .btn:hover { color: var(--bg); filter: brightness(1.12); }
+  .scheda { margin: 0; align-self: end; display: grid; gap: 0; border-top: 2px solid var(--accent); }
+  .scheda div { display: grid; gap: 2px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .scheda dt { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .scheda dd { margin: 0; font-weight: 600; }
+
+  /* Sezioni */
+  section { border-top: 1px solid var(--line); padding-block: 40px; display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 16px 40px; }
+  section > h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.015em; }
+  .body { min-width: 0; }
+
+  /* Servizi */
+  .servizi { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+  .servizi h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 6px; }
+  .servizi p { color: var(--muted); }
+
+  /* Registro dei lavori */
+  .lavoro { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 8px 32px; padding-block: 24px; border-bottom: 1px solid var(--line); }
+  .lavoro:first-child { padding-top: 0; }
+  .lavoro:last-child { border-bottom: 0; padding-bottom: 0; }
+  .lavoro .meta { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+  .stato { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .stato::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--muted); }
+  .stato.live { color: var(--accent); }
+  .stato.live::before { background: var(--accent); }
+  .lavoro h3 { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.01em; }
+  .lavoro p { margin-top: 6px; color: var(--muted); max-width: 40em; }
+  .tags { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .tags li { font-family: var(--font-mono); font-size: 0.75rem; background: var(--chip); padding: 3px 9px; border-radius: 3px; }
+
+  /* Stack */
+  .stack { display: grid; gap: 0; margin: 0; }
+  .stack div { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 8px 24px; padding-block: 14px; border-bottom: 1px solid var(--line); }
+  .stack div:first-child { padding-top: 0; }
+  .stack div:last-child { border-bottom: 0; padding-bottom: 0; }
+  .stack dt { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 4px; }
+  .stack dd { margin: 0; }
+  .stack .tags { margin: 0; }
+
+  .chisono p + p { margin-top: 14px; }
+  .chisono { max-width: 38em; }
+
+  footer { border-top: 1px solid var(--line); padding-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+    section { grid-template-columns: minmax(0, 1fr); gap: 20px; padding-block: 32px; }
+    .servizi { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .lavoro { grid-template-columns: minmax(0, 1fr); }
+    .lavoro .meta { flex-direction: row; align-items: center; gap: 14px; }
+    .stack div { grid-template-columns: minmax(0, 1fr); }
+    .stack dt { padding-top: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <p class="mono">Sviluppatore freelance · Torino</p>
+      <h1>Nicolò Giacometto</h1>
+      <p class="lead">Realizzo siti vetrina, negozi online e applicazioni web su misura per attività locali e professionisti. Studio Informatica all'Università di Torino e lavoro come sviluppatore.</p>
+      <div class="actions">
+        <a class="btn" href="#lavori">Guarda i lavori</a>
+        <a href="https://github.com/nicologiacometto11" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <dl class="scheda">
+      <div><dt>Base</dt><dd>Collegno (TO)</dd></div>
+      <div><dt>Clienti in zona</dt><dd>Grugliasco, Val della Torre</dd></div>
+      <div><dt>Formazione</dt><dd>Informatica, Università di Torino</dd></div>
+      <div><dt>Disponibilità</dt><dd>Nuovi progetti, anche da remoto</dd></div>
+    </dl>
+  </header>
+
+  <section id="servizi">
+    <h2>Cosa faccio</h2>
+    <div class="body servizi">
+      <div>
+        <h3>Siti vetrina</h3>
+        <p>Per attività che vogliono farsi trovare online. Pagine chiare, veloci e leggibili da telefono.</p>
+      </div>
+      <div>
+        <h3>E-commerce con Shopify</h3>
+        <p>Redesign del negozio, catalogo prodotti, spedizioni e collegamento con corrieri e marketplace.</p>
+      </div>
+      <div>
+        <h3>Web app su misura</h3>
+        <p>Gestionali e strumenti per professionisti, costruiti con React e un database SQL.</p>
+      </div>
+      <div>
+        <h3>Miglioramento di codice esistente</h3>
+        <p>Correzioni, refactoring e nuove funzioni su progetti già avviati.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="lavori">
+    <h2>Lavori</h2>
+    <div class="body">
+      <article class="lavoro">
+        <div class="meta">
+          <span class="mono">E-commerce</span>
+          <span class="stato live">In corso</span>
+        </div>
+        <div>
+          <h3>Equipe Sport</h3>
+          <p>Redesign del sito Shopify di un negozio di articoli sportivi di Grugliasco. Mockup in HTML, ambiente di sviluppo locale con Shopify CLI, spedizioni con MBE accanto a BRT, aggiornamento di giacenze, descrizioni e foto del catalogo.</p>
+          <ul class="tags"><li>Shopify</li><li>HTML</li></ul>
+        </div>
+      </article>
+
+      <article class="lavoro">
+        <div class="meta">
+          <span class="mono">Sito vetrina</span>
+          <span class="stato live">In corso</span>
+        </div>
+        <div>
+          <h3>La Dea Ranch</h3>
+          <p>Sito per un centro ippico e azienda agricola di Val della Torre. In una fase successiva gestirà richieste di contatto e prenotazioni.</p>
+        </div>
+      </article>
+
+      <article class="lavoro">
+        <div class="meta">
+          <span class="mono">SaaS</span>
+        </div>
+        <div>
+          <h3><a href="https://psychart.it" target="_blank" rel="noopener">Psychart</a></h3>
+          <p>Applicazione per la gestione delle cartelle cliniche, pensata per psicologi italiani. Sviluppata come lavoro freelance.</p>
+        </div>
+      </article>
+
+      <article class="lavoro">
+        <div class="meta">
+          <span class="mono">Web app</span>
+          <span class="stato">Online</span>
+        </div>
+        <div>
+          <h3><a href="https://tennismanager2026.netlify.app" target="_blank" rel="noopener">Tennis Manager</a></h3>
+          <p>Applicazione web pubblicata su Netlify. Sto valutando la versione installabile da mobile (PWA).</p>
+          <ul class="tags"><li>React</li><li>Vite</li></ul>
+        </div>
+      </article>
+
+      <article class="lavoro">
+        <div class="meta">
+          <span class="mono">App desktop</span>
+          <span class="stato live">In corso</span>
+        </div>
+        <div>
+          <h3>Stream Utility</h3>
+          <p>Applicazione Windows per gestire dirette su Twitch, Kick e YouTube. Incarico di correzione e refactoring del codice.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="stack">
+    <h2>Strumenti</h2>
+    <dl class="body stack">
+      <div>
+        <dt>Linguaggi</dt>
+        <dd><ul class="tags"><li>Java</li><li>C / C++</li><li>Python</li><li>SQL</li></ul></dd>
+      </div>
+      <div>
+        <dt>Web</dt>
+        <dd><ul class="tags"><li>React</li><li>Vite</li><li>Shopify</li><li>PostgreSQL</li></ul></dd>
+      </div>
+      <div>
+        <dt>Flusso di lavoro</dt>
+        <dd><ul class="tags"><li>Git</li><li>GitHub</li><li>Claude Code</li><li>Cursor</li><li>Copilot</li></ul></dd>
+      </div>
+    </dl>
+  </section>
+
+  <section id="chi-sono">
+    <h2>Chi sono</h2>
+    <div class="body chisono">
+      <p>Sono all'ultimo anno di Informatica all'Università di Torino e lavoro part-time come sviluppatore. Porto avanti progetti freelance per negozi, aziende della zona e professionisti.</p>
+      <p>Uso strumenti di sviluppo con l'AI, come Claude Code e Cursor, per lavorare più in fretta e consegnare prima.</p>
+    </div>
+  </section>
+
+  <section id="contatti">
+    <h2>Contatti</h2>
+    <div class="body">
+      <p>Hai un progetto o un sito da rifare? Sono disponibile per nuovi lavori a Torino e dintorni, o da remoto.</p>
+      <p style="margin-top:12px"><a href="https://github.com/nicologiacometto11" target="_blank" rel="noopener">github.com/nicologiacometto11</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <span class="mono">Nicolò Giacometto</span>
+    <span class="mono">Collegno, Torino · 2026</span>
+  </footer>
+</div>
+</body>
+</html>
