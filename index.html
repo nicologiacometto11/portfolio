@@ -64,7 +64,7 @@
     font-family: var(--font-body);
     font-size: 1.0625rem;
     line-height: 1.6;
-    padding-block: 40px 56px;
+    padding-block: 20px 56px;
     padding-left: max(16px, env(safe-area-inset-left, 0px));
     padding-right: max(16px, env(safe-area-inset-right, 0px));
   }
@@ -75,6 +75,11 @@
   h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; }
   p { margin: 0; }
   .mono { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+  .lingua { display: flex; justify-content: flex-end; gap: 4px; padding-bottom: 20px; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; }
+  .lingua a, .lingua span { padding: 3px 8px; border-radius: 3px; text-decoration: none; color: var(--muted); }
+  .lingua a:hover { color: var(--accent); }
+  .lingua [aria-current] { background: var(--chip); color: var(--fg); font-weight: 500; }
 
   /* Hero */
   .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 290px); gap: 40px 64px; padding-bottom: 56px; }
@@ -143,6 +148,7 @@
 </head>
 <body>
 <div class="wrap">
+  <nav class="lingua" aria-label="Lingua"><span aria-current="page">IT</span><a href="en/" hreflang="en" lang="en" aria-label="English">EN</a></nav>
   <header class="hero">
     <div>
       <p class="mono">Sviluppatore freelance · Torino</p>
@@ -151,7 +157,6 @@
       <div class="actions">
         <a class="btn" href="#lavori">Guarda i lavori</a>
         <a href="https://github.com/nicologiacometto11" target="_blank" rel="noopener">GitHub</a>
-        <a href="en/" hreflang="en" lang="en">English</a>
       </div>
     </div>
     <div class="lato">
