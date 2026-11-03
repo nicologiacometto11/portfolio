@@ -140,6 +140,12 @@
   }
   @media (max-width: 560px) {
     .lavoro { grid-template-columns: minmax(0, 1fr); }
+    /* Da telefono: prima il nome, poi il tipo (Web app, ecc.), poi descrizione e tag */
+    .lavoro > div:last-child { display: contents; }
+    .lavoro h3 { order: 1; }
+    .lavoro .meta { order: 2; margin-top: 2px; }
+    .lavoro p { order: 3; margin-top: 4px; }
+    .lavoro .tags { order: 4; }
     .lavoro .meta { flex-direction: row; align-items: center; gap: 14px; }
     .stack div { grid-template-columns: minmax(0, 1fr); }
     .stack dt { padding-top: 0; }
