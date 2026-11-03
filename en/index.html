@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nicolò Silvio Giacometto · Freelance developer in Turin</title>
+<meta name="description" content="Portfolio of Nicolò Silvio Giacometto, freelance developer in Turin, Italy: business websites, Shopify e-commerce, web apps and iOS and Android apps.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#7B1E2E">
+<link rel="canonical" href="https://nicologiacometto11.github.io/portfolio/en/">
+<link rel="alternate" hreflang="it" href="https://nicologiacometto11.github.io/portfolio/">
+<link rel="alternate" hreflang="en" href="https://nicologiacometto11.github.io/portfolio/en/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Nicolò Silvio Giacometto">
+<meta property="og:title" content="Nicolò Silvio Giacometto · Freelance developer in Turin">
+<meta property="og:description" content="Business websites, e-commerce, web apps and iOS and Android apps, built to measure.">
+<meta property="og:url" content="https://nicologiacometto11.github.io/portfolio/en/">
+<meta property="og:image" content="https://nicologiacometto11.github.io/portfolio/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: pagina singola a sinistra, scheda dei dati a destra in alto, poi un registro dei lavori a righe. */
+  :root {
+    color-scheme: light;
+    --bg: #F2F3F6;
+    --fg: #161922;
+    --muted: #565C6C;
+    --line: #D3D7E0;
+    --accent: #7B1E2E;
+    --chip: #E4E7EE;
+    --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #13151B;
+      --fg: #ECEDF0;
+      --muted: #A0A6B4;
+      --line: #2A2E39;
+      --accent: #E57F8D;
+      --chip: #1F232C;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #13151B;
+    --fg: #ECEDF0;
+    --muted: #A0A6B4;
+    --line: #2A2E39;
+    --accent: #E57F8D;
+    --chip: #1F232C;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    padding-block: 40px 56px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; }
+  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+  a:hover { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; }
+  p { margin: 0; }
+  .mono { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 290px); gap: 40px 64px; padding-bottom: 56px; }
+  .hero h1 { font-size: clamp(2.6rem, 7.2vw, 4.7rem); line-height: 1; font-weight: 700; letter-spacing: -0.03em; margin-top: 14px; }
+  .lead { margin-top: 24px; max-width: 34em; font-size: 1.25rem; line-height: 1.5; }
+  .actions { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; }
+  .btn { display: inline-block; background: var(--accent); color: var(--bg); text-decoration: none; padding: 11px 20px; border-radius: 4px; font-weight: 600; }
+  .btn:hover { color: var(--bg); filter: brightness(1.12); }
+  .lato { align-self: end; display: grid; gap: 20px; }
+  .foto { width: 132px; height: 132px; object-fit: cover; border-radius: 50%; border: 2px solid var(--accent); display: block; }
+  .scheda { margin: 0; display: grid; gap: 0; border-top: 2px solid var(--accent); }
+  .scheda div { display: grid; gap: 2px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .scheda dt { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .scheda dd { margin: 0; font-weight: 600; }
+
+  /* Sezioni */
+  section { border-top: 1px solid var(--line); padding-block: 40px; display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 16px 40px; }
+  section > h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.015em; }
+  .body { min-width: 0; }
+
+  /* Servizi */
+  .servizi { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+  .servizi h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 6px; }
+  .servizi p { color: var(--muted); }
+
+  /* Registro dei lavori */
+  .lavoro { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 8px 32px; padding-block: 24px; border-bottom: 1px solid var(--line); }
+  .lavoro:first-child { padding-top: 0; }
+  .lavoro:last-child { border-bottom: 0; padding-bottom: 0; }
+  .lavoro .meta { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+  .lavoro h3 { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.01em; }
+  .lavoro p { margin-top: 6px; color: var(--muted); max-width: 40em; }
+  .tags { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .tags li { font-family: var(--font-mono); font-size: 0.75rem; background: var(--chip); padding: 3px 9px; border-radius: 3px; }
+
+  /* Stack */
+  .stack { display: grid; gap: 0; margin: 0; }
+  .stack div { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 8px 24px; padding-block: 14px; border-bottom: 1px solid var(--line); }
+  .stack div:first-child { padding-top: 0; }
+  .stack div:last-child { border-bottom: 0; padding-bottom: 0; }
+  .stack dt { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 4px; }
+  .stack dd { margin: 0; }
+  .stack .tags { margin: 0; }
+
+  .percorso .sub { color: var(--muted); display: inline-block; margin-top: 4px; max-width: 40em; }
+  .percorso dd + dd { margin-top: 6px; }
+
+  .chisono p + p { margin-top: 14px; }
+  .chisono { max-width: 38em; }
+
+  footer { border-top: 1px solid var(--line); padding-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+    section { grid-template-columns: minmax(0, 1fr); gap: 20px; padding-block: 32px; }
+    .servizi { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .lavoro { grid-template-columns: minmax(0, 1fr); }
+    .lavoro .meta { flex-direction: row; align-items: center; gap: 14px; }
+    .stack div { grid-template-columns: minmax(0, 1fr); }
+    .stack dt { padding-top: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <p class="mono">Freelance developer · Turin, Italy</p>
+      <h1>Nicolò Silvio Giacometto</h1>
+      <p class="lead">I build business websites, online stores, web apps and iOS and Android apps for local businesses and professionals. I study Computer Science at the University of Turin and work as a developer.</p>
+      <div class="actions">
+        <a class="btn" href="#lavori">See my work</a>
+        <a href="https://github.com/nicologiacometto11" target="_blank" rel="noopener">GitHub</a>
+        <a href="../" hreflang="it" lang="it">Italiano</a>
+      </div>
+    </div>
+    <div class="lato">
+    <img class="foto" src="../foto.webp" width="250" height="250" alt="Nicolò Silvio Giacometto">
+    <dl class="scheda">
+      <div><dt>Based in</dt><dd>Collegno (Turin)</dd></div>
+      <div><dt>Local clients</dt><dd>Collegno, Grugliasco, Val della Torre</dd></div>
+      <div><dt>Education</dt><dd>Computer Science, University of Turin</dd></div>
+      <div><dt>Availability</dt><dd>New projects, remote too</dd></div>
+    </dl>
+    </div>
+  </header>
+
+  <section id="servizi">
+    <h2>What I do</h2>
+    <div class="body servizi">
+      <div>
+        <h3>Business websites</h3>
+        <p>For businesses that want to be found online. Clear, fast pages that read well on a phone.</p>
+      </div>
+      <div>
+        <h3>E-commerce</h3>
+        <p>Store redesign, product catalogue, shipping and integration with couriers and marketplaces.</p>
+      </div>
+      <div>
+        <h3>Custom web apps</h3>
+        <p>Management tools for professionals, built with React and an SQL database.</p>
+      </div>
+      <div>
+        <h3>iOS and Android apps</h3>
+        <p>Mobile apps built with Flutter, with a server and database, published on the App Store and Google Play.</p>
+      </div>
+      <div>
+        <h3>Improving existing code</h3>
+        <p>Fixes, refactoring and new features on existing projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="lavori">
+    <h2>Work</h2>
+    <div class="body">
+      <article class="lavoro">
+        <div class="meta">
+          <span class="mono">E-commerce</span>
+        </div>
+        <div>
+          <h3><a href="https://equipesport.it" target="_blank" rel="noopener">Equipe Sport</a></h3>
+          <p>Redesign of the Shopify store of a sporting goods shop in Grugliasco. Custom theme with bespoke sections (hero, categories, personalisation banner, product page with DTF print ordering) and a Shopify app with a discount function for pricing. Shipping with MBE alongside BRT, stock and catalogue kept up to date. I also manage the online inventory.</p>
+          <ul class="tags"><li>Shopify</li><li>Liquid</li><li>Shopify Functions</li></ul>
+        </div>
+      </article>
+
+      <article class="lavoro">
+        <div class="meta">
+          <span class="mono">Mobile app</span>
+        </div>
+        <div>
+          <h3><a href="https://psychart.it" target="_blank" rel="noopener">Psychart</a></h3>
+          <p>Free app for psychologists and doctors, built on my own. It handles patients, calendar, payments, PDF reports and a section for student patients. Doctors also get medical reports, prescriptions and certificates. Clinical data is encrypted on the device before it reaches the server, and the app also works offline. I built the product website too, with privacy policy and DPIA.</p>
+          <ul class="tags"><li>Flutter</li><li>FastAPI</li><li>PostgreSQL</li></ul>
+        </div>
+      </article>
+
+      <article class="lavoro">
+        <div class="meta">
+          <span class="mono">Business website</span>
+        </div>
+        <div>
+          <h3><a href="https://nicologiacometto11.github.io/la-dea-ranch/" target="_blank" rel="noopener">La Dea Ranch</a></h3>
+          <p>Website for a horse riding centre and farm in Val della Torre: activities, Winter Camp, contacts, social links and real photos of the ranch. Designed for visitors coming from Instagram on their phone. Published with GitHub Pages. A later phase will handle contact requests and bookings.</p>
+          <ul class="tags"><li>React</li><li>Vite</li><li>GitHub Pages</li></ul>
+        </div>
+      </article>
+
+      <article class="lavoro">
+        <div class="meta">
+          <span class="mono">Web app · PWA</span>
+        </div>
+        <div>
+          <h3><a href="https://itsurri.github.io/itstracker/" target="_blank" rel="noopener">itstracker</a></h3>
+          <p>TV series and film tracker that installs as an app: library with per-episode progress, upcoming episodes, stats and a yearly recap. With Google sign-in you get sync across devices, comments, public profiles, friends, chat and notifications. Data from TMDB. Built together with a partner.</p>
+          <ul class="tags"><li>JavaScript</li><li>Firebase</li><li>Firestore</li><li>TMDB</li></ul>
+        </div>
+      </article>
+
+      <article class="lavoro">
+        <div class="meta">
+          <span class="mono">Web app · PWA</span>
+        </div>
+        <div>
+          <h3><a href="https://nicologiacometto11.github.io/stars-and-dungeons/" target="_blank" rel="noopener">Stars &amp; Dungeons</a></h3>
+          <p>Companion app for a tabletop role-playing game. Each player has an account and a character sheet that lasts over time: stats calculated from the rules, shop, inventory, bestiary and crafting. The Game Master has a dedicated view with a shared game table in real time.</p>
+          <ul class="tags"><li>React</li><li>Vite</li><li>Supabase</li></ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="stack">
+    <h2>Tools</h2>
+    <dl class="body stack">
+      <div>
+        <dt>Languages</dt>
+        <dd><ul class="tags"><li>Java</li><li>C / C++</li><li>Assembly</li><li>Python</li><li>JavaScript</li><li>Dart</li><li>SQL</li><li>HTML / CSS</li><li>Liquid</li></ul></dd>
+      </div>
+      <div>
+        <dt>Web</dt>
+        <dd><ul class="tags"><li>React</li><li>Vite</li><li>Flutter</li><li>FastAPI</li><li>Shopify</li><li>PostgreSQL</li><li>Supabase</li><li>Firebase</li></ul></dd>
+      </div>
+      <div>
+        <dt>Workflow</dt>
+        <dd><ul class="tags"><li>Git</li><li>GitHub</li><li>GitHub Actions</li><li>Bash / Zsh</li><li>Linux</li><li>Docker</li><li>Claude Code</li></ul></dd>
+      </div>
+    </dl>
+  </section>
+
+  <section id="percorso">
+    <h2>Background</h2>
+    <dl class="body stack percorso">
+      <div>
+        <dt>Since 10/2024</dt>
+        <dd><strong>Bachelor's degree in Computer Science</strong>, University of Turin</dd>
+      </div>
+      <div>
+        <dt>2025 – 2026</dt>
+        <dd><strong>GNU/Linux Basics course</strong>, NetStudent and WEEE Open (11/2025 – 03/2026)<br><strong>Challenge For Skill</strong>, University of Turin (09/2025 – 10/2025)</dd>
+      </div>
+      <div>
+        <dt>2018 – 2023</dt>
+        <dd><strong>Technical high school diploma in Electronics</strong>, ITI Ettore Majorana, Grugliasco. Final grade 82/100</dd>
+      </div>
+      <div>
+        <dt>Languages</dt>
+        <dd>Italian, native. English B2, Cambridge PET certificate</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section id="chi-sono">
+    <h2>About me</h2>
+    <div class="body chisono">
+      <p>I'm in my final year of Computer Science at the University of Turin and work part-time as a developer. I run freelance projects for shops, local businesses and professionals.</p>
+      <p>I use Claude Code, the only AI tool I work with, to handle several projects at once and get help, since I work on my own.</p>
+    </div>
+  </section>
+
+  <section id="contatti">
+    <h2>Contact</h2>
+    <div class="body">
+      <p>Have a project or a website to redo? I'm available for new work in and around Turin, or remotely.</p>
+      <p style="margin-top:16px"><a class="btn" href="https://wa.me/393792668315?text=Hi%20Nicol%C3%B2%2C%20I%27m%20writing%20from%20your%20website" target="_blank" rel="noopener">Message me on WhatsApp</a></p>
+      <p style="margin-top:16px"><a href="mailto:giacometto.nicolo@gmail.com">giacometto.nicolo@gmail.com</a></p>
+      <p style="margin-top:4px"><a href="tel:+393792668315">+39 379 266 8315</a></p>
+      <p style="margin-top:4px"><a href="https://github.com/nicologiacometto11" target="_blank" rel="noopener">github.com/nicologiacometto11</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <span class="mono">Nicolò Silvio Giacometto</span>
+    <span class="mono">Collegno, Turin · 2026</span>
+  </footer>
+</div>
+</body>
+</html>
