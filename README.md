@@ -22,8 +22,16 @@ Il workflow `.github/workflows/deploy.yml` lo pubblica a ogni push su `main`, op
 
 Impostazione da fare una volta sola: Settings → Pages → Source = GitHub Actions.
 
+## Contenuto
+
+Header con scheda dati, poi le sezioni Cosa faccio, Lavori (Equipe Sport, Psychart, La Dea Ranch, itstracker, Stars & Dungeons), Percorso (dal CV), Strumenti, Chi sono e Contatti (email, telefono, GitHub).
+
+Nel sito non ci sono data di nascita, indirizzo di casa e foto del CV.
+
 ## Da fare
 
-- Aggiungere i contatti (email, telefono o LinkedIn) nella sezione Contatti.
-- Controllare le descrizioni dei progetti.
 - Aggiungere screenshot dei progetti.
+- Controllare le descrizioni dei progetti.
+- Valutare la partita IVA e rivedere di conseguenza i testi ("freelance", "nuovi progetti").
+- Eventuale LinkedIn nei Contatti.
+- Meta tag per l'anteprima dei link e favicon.
