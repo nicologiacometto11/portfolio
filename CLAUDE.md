@@ -41,10 +41,10 @@ I lavori sono un registro a righe (tipo e stato a sinistra, titolo, descrizione 
 
 Descritti guardando le cartelle in `~/Sviluppo` (3 novembre 2026):
 
-- Psychart: app Flutter + FastAPI + PostgreSQL per psicologi e medici, cifratura E2EE, `psychart.it`
+- Psychart: app Flutter + FastAPI + PostgreSQL per psicologi e medici, cifratura E2EE, `psychart.it`, gratis su App Store e Google Play, fatta da solo
 - Equipe Sport: redesign Shopify di Grugliasco (tema con sezioni Liquid su misura, app con Shopify Function di sconto) (in corso)
 - La Dea Ranch: sito vetrina React/Vite su GitHub Pages, centro ippico di Val della Torre (in corso)
-- itstracker: tracker serie TV e film, PWA con Firebase e TMDB (repo sotto l'org `itsurri`)
+- itstracker: tracker serie TV e film, PWA con Firebase e TMDB (fatto con un socio, repo sotto l'org `itsurri`), `itsurri.github.io/itstracker`
 - Stars & Dungeons: companion web per un GDR, React/Vite/Supabase
 
 Tennis Manager e Stream Utility sono stati tolti dal sito.
@@ -56,7 +56,6 @@ Tennis Manager e Stream Utility sono stati tolti dal sito.
 - Aggiungere screenshot dei progetti.
 - Verificare che `psychart.it` sia il link giusto da mostrare.
 - Eventuale dominio personale.
-- Aggiungere link dove ci sono siti pubblici (La Dea Ranch, itstracker, Stars & Dungeons).
 - Meta tag per la condivisione dei link (anteprima) e favicon.
 
 ## Convenzioni
